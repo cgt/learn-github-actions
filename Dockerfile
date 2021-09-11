@@ -3,6 +3,7 @@ WORKDIR /go/src/learn-github-actions
 COPY go.mod go.sum ./
 RUN go mod download
 COPY . .
-RUN go install -v
+ARG BUILD_ID=dev
+RUN go install -v -ldflags "-X main.BuildID=${BUILD_ID}"
 RUN go test -v
 CMD ["learn-github-actions"]

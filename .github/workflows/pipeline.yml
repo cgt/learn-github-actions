@@ -52,3 +52,4 @@ jobs:
         with:
           cache-from: type=gha
           cache-to: type=gha,mode=max
+          build-args: BUILD_ID=${{ GITHUB_SHA }}
