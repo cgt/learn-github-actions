@@ -23,8 +23,8 @@ jobs:
         with:
           key: ${{ runner.os }}-build
           path: |
-            /home/runner/.cache/go-build
-            /home/runner/go/pkg/mod
+            ~/.cache/go-build
+            ~/go/pkg/mod
 
       - name: Download dependencies
         run: go mod download
