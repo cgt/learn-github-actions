@@ -39,7 +39,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: learn-github-actions
-          path: ~/go/bin/learn-github-actions
+          path: learn-github-actions
 
   build-docker:
     runs-on: ubuntu-latest
