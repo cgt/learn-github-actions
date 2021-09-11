@@ -6,7 +6,7 @@ COPY . .
 ARG BUILD_ID=dev
 ENV CGO_ENABLED=0
 RUN go install -v -ldflags "-X main.BuildID=${BUILD_ID}"
-RUN go test -v
+RUN go test -v -short
 
 FROM alpine:3.14
 COPY --from=builder /go/bin/learn-github-actions /usr/local/bin/learn-github-actions
