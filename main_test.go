@@ -6,5 +6,6 @@ import (
 )
 
 func Test2Plus2Equals4(t *testing.T) {
-	assert.Equal(t, 4, add(2, 2))
+	actual := add(2, 2)
+	assert.Equal(t, 4, actual)
 }
