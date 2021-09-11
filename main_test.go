@@ -1,10 +1,11 @@
 package main
 
-import "testing"
+import (
+	"github.com/stretchr/testify/assert"
+	"testing"
+)
 
 func Test2Plus2Equals4(t *testing.T) {
 	actual := add(2, 2)
-	if expected := 4; actual != expected {
-		t.Errorf("expected %v, got %v", expected, actual)
-	}
+	assert.Equal(t, 4, actual)
 }
