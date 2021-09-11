@@ -23,3 +23,12 @@ jobs:
 
       - name: Test
         run: go test -v ./...
+
+  build-docker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-actions@v1
+
+      - name: Build Docker image
+        uses: docker/build-push-action@v2
