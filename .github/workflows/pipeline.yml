@@ -35,6 +35,12 @@ jobs:
       - name: Test
         run: go test -v ./...
 
+      - name: Save executable
+        uses: actions/upload-artifact@v2
+        with:
+          name: learn-github-actions
+          path: ~/go/bin/learn-github-actions
+
   build-docker:
     runs-on: ubuntu-latest
     steps:
